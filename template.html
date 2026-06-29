@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+
+<div class="logo">VacumPro</div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#070b16;
+color:white;
+overflow-x:hidden;
+}
+
+body.light{
+background:#f6f7fb;
+color:#111;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#38bdf8;
+}
+
+nav a{
+margin-left:30px;
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+body.light nav a{
+color:#111;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.theme{
+cursor:pointer;
+font-size:22px;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+radial-gradient(circle at top,#2563eb55,transparent),
+radial-gradient(circle at bottom,#06b6d455,transparent),
+#070b16;
+}
+
+body.light .hero{
+background:#eef4ff;
+}
+
+.hero h1{
+font-size:65px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+opacity:.8;
+font-size:20px;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:16px 35px;
+background:#38bdf8;
+color:white;
+text-decoration:none;
+border-radius:50px;
+transition:.3s;
+font-weight:700;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 25px #38bdf8;
+}
+
+section{
+padding:100px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:20px;
+transition:.35s;
+}
+
+body.light .card{
+background:white;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px #38bdf855;
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:18px;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.faq-item{
+background:rgba(255,255,255,.05);
+padding:20px;
+margin-bottom:15px;
+border-radius:15px;
+cursor:pointer;
+}
+
+.answer{
+display:none;
+padding-top:15px;
+opacity:.8;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:none;
+border-radius:12px;
+}
+
+.contact button{
+padding:15px;
+width:100%;
+border:none;
+border-radius:12px;
+background:#38bdf8;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#05070d;
+margin-top:80px;
+}
+
+.top{
+position:fixed;
+bottom:25px;
+right:25px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#38bdf8;
+color:white;
+font-size:22px;
+cursor:pointer;
+display:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">VacuumPro</div>
+
+<nav>
+
+<a href="#models">Модели</a>
+
+<a href="#gallery">Галерея</a>
+
+<a href="#faq">FAQ</a>
+
+<a href="#contact">Контакты</a>
+
+</nav>
+
+<div class="theme" id="theme">🌙</div>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Премиальные роботы-пылесосы</h1>
+
+<p>
+Мощная уборка, интеллектуальная навигация и современный дизайн.
+Пусть ваш дом всегда остается идеально чистым.
+</p>
+
+<a href="#models" class="btn">Смотреть модели</a>
+
+</div>
+
+</section>
+
+<section id="models">
+
+<h2 class="title">Популярные модели</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://placehold.co/600x400" alt="">
+
+<h3>Vacuum X1</h3>
+
+<p>Мощность 6000 Па. Автоматическая карта дома.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://placehold.co/600x400" alt="">
+
+<h3>Vacuum Ultra</h3>
+
+<p>Влажная уборка и самоочистка станции.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://placehold.co/600x400" alt="">
+
+<h3>Vacuum Max</h3>
+
+<p>До 220 минут автономной работы.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="title">Галерея</h2>
+
+<div class="gallery">
+
+<img src="https://placehold.co/500x500">
+
+<img src="https://placehold.co/500x500">
+
+<img src="https://placehold.co/500x500">
+
+<img src="https://placehold.co/500x500">
+
+</div>
+
+</section>
+
+<section id="faq">
+
+<h2 class="title">FAQ</h2>
+
+<div class="faq-item">
+
+<h3>Сколько работает аккумулятор?</h3>
+
+<div class="answer">
+
+До 220 минут без подзарядки.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Можно ли мыть пол?</h3>
+
+<div class="answer">
+
+Да, все модели поддерживают влажную уборку.
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Связаться с нами</h2>
+
+<form class="contact">
+
+<input type="text" placeholder="Ваше имя" required>
+
+<input type="email" placeholder="Email" required>
+
+<textarea rows="6" placeholder="Сообщение"></textarea>
+
+<button>Отправить</button>
+
+</form>
+
+</section>
+
+<footer>
+
+© 2026 VacuumPro • Премиальные роботы-пылесосы
+
+</footer>
+
+<button class="top" id="top">↑</button>
+
+<script>
+
+const theme=document.getElementById("theme");
+
+theme.onclick=()=>{
+
+document.body.classList.toggle("light");
+
+theme.textContent=document.body.classList.contains("light")?"☀":"🌙";
+
+}
+
+document.querySelectorAll(".faq-item").forEach(item=>{
+
+item.onclick=()=>{
+
+let ans=item.querySelector(".answer");
+
+ans.style.display=ans.style.display==="block"?"none":"block";
+
+}
+
+})
+
+const topBtn=document.getElementById("top");
+
+window.onscroll=()=>{
+
+topBtn.style.display=window.scrollY>400?"block":"none";
+
+}
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+})
+
+}
+
+document.querySelector("form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Спасибо! Заявка отправлена.");
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
